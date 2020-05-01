@@ -1,0 +1,7 @@
+---
+- hosts: greengrass-devices
+  become: yes
+  vars:
+    greengrass_core_downlod_url:
+  roles:
+    - env-setup-for-gg

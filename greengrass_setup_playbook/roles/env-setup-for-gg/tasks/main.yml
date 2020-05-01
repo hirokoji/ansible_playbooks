@@ -1,0 +1,16 @@
+- name: Add ggc_user
+  user:
+    name: ggc_user
+    system: yes
+- name: Add ggc_group
+  group:
+    name: ggc_group
+    system: yes
+
+- name: Hardlink and Softlink (symlink) protections are enabled
+  sysctl:
+    name: fs.protected_hardlinks
+    value: 1
+  sysctl:
+    name: fs.protected_symlinks
+    value: 1
